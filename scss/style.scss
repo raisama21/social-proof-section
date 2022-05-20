@@ -52,6 +52,7 @@ section {
   h1 {
     @include medium-bp {
       text-align: left;
+      font-size: 3rem;
     }
     line-height: 0.9;
     max-width: 14ch;
@@ -65,6 +66,7 @@ section {
     @include medium-bp {
       text-align: left;
       min-width: 410px;
+      font-size: 1rem;
     }
     max-width: 32ch;
     padding-top: 1.5rem;
