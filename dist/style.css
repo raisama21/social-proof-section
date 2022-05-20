@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+:root {
+  --verydarkmagneta: hsl(300, 43%, 22%);
+  --softpink: hsl(333, 80%, 67%);
+  --darkgrayishmagneta: hsl(303, 10%, 53%);
+  --lightgrayishmagneta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --fs-300: 0.9375rem;
+  --sm-width: 20.4375rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  padding-block: 5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: var(--sm-width);
+}
+@media (min-width: 900px) {
+  .container {
+    min-width: 1110px;
+  }
+}
+
+@media (min-width: 900px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.description {
+  text-align: center;
+}
+.description h1 {
+  line-height: 0.9;
+  max-width: 14ch;
+  font-size: 2.375rem;
+  color: var(--verydarkmagneta);
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .description h1 {
+    text-align: left;
+  }
+}
+.description p {
+  max-width: 32ch;
+  padding-top: 1.5rem;
+  font-weight: 500;
+  color: var(--darkgrayishmagneta);
+}
+@media (min-width: 900px) {
+  .description p {
+    text-align: left;
+    min-width: 410px;
+  }
+}
+
+.ratings {
+  margin-block: 3rem;
+}
+@media (min-width: 900px) {
+  .ratings {
+    display: grid;
+  }
+}
+
+.review {
+  text-align: center;
+  background-color: var(--lightgrayishmagneta);
+  color: var(--verydarkmagneta);
+  font-weight: 700;
+  padding-block: 1.125rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 900px) {
+  .review {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 445px;
+  }
+}
+.review__svg {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.review:nth-child(2) {
+  margin-block: 1rem;
+}
+
+@media (min-width: 900px) {
+  .review:nth-child(2) {
+    transform: translate(3.375rem);
+  }
+
+  .review:nth-child(3) {
+    transform: translate(6.75rem);
+  }
+}
+.card {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .card {
+    flex-direction: row;
+  }
+}
+.card p {
+  color: var(--white);
+}
+@media (min-width: 900px) {
+  .card__item:nth-child(2) {
+    transform: translateY(1rem);
+  }
+  .card__item:nth-child(3) {
+    transform: translateY(2rem);
+  }
+}
+.card__item {
+  background-color: var(--verydarkmagneta);
+  padding: 2rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.card__item--flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+.card__item--flex img {
+  width: 40px;
+  border-radius: 50%;
+}
+.card__item--profile {
+  line-height: 1.2;
+}
+.card__item--profile p:first-of-type {
+  color: var(--white);
+}
+.card__item--profile p:last-of-type {
+  color: var(--softpink);
+}
+
+/*# sourceMappingURL=style.css.map */
