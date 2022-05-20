@@ -14,6 +14,16 @@ $md-bp: 900px;
 body {
   font-family: "League Spartan", sans-serif;
   padding-block: 5rem;
+
+  background-image: url(/images/bg-pattern-top-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+
+  @include medium-bp {
+    background-image: url(/images/bg-pattern-top-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
 }
 
 .flex {
